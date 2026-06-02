@@ -1,0 +1,19 @@
+#on: 
+  #schedule:
+    #- cron: 0 8 * * 1-5
+on: 
+  workflow_dispatch:
+    inputs:
+      mood:
+        description: "What's the mood today?"
+        required: false
+        type: string
+        
+jobs:
+  get_quote:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Run script to get quote
+        run: ./.github/scripts/quotable.sh
+        shell: bash
+
