@@ -1,19 +1,19 @@
-#on: 
-  #schedule:
-    #- cron: 0 8 * * 1-5
+name: Inspirational quote of the day
 on: 
-  workflow_dispatch:
-    inputs:
-      mood:
-        description: "What's the mood today?"
-        required: false
-        type: string
+  schedule:
+    - cron: 0 8 * * 1-5
         
 jobs:
   get_quote:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+  
       - name: Run script to get quote
-        run: ./.github/scripts/quotable.sh
-        shell: bash
+        run: ./.github/scripts/quotable.py
 
