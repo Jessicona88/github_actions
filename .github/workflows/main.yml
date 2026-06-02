@@ -17,6 +17,12 @@ jobs:
       - name: Install Requests library
         run: python -m pip install requests
   
-      - name: Run script to get quote
-        run: python ./.github/scripts/quotable.py
+      - name: Get quote
+        id: quote
+        run: |
+          quote=$(python .github/scripts/quotable.py)
+          echo "quote=$quote" >> "$GITHUB_OUTPUT"
+
+    - name: Print quote
+      run: echo "${{ steps.quote.outputs.quote }}"
 
