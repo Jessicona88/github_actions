@@ -16,5 +16,5 @@ jobs:
           python-version: "3.12"
   
       - name: Run script to get quote
-        run: ./.github/scripts/quotable.py
+        run: python ./.github/scripts/quotable.py
 
