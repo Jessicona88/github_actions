@@ -1,6 +1,6 @@
 import requests
 
-url = "https://api.quotable.io/random?tags=inspirational"
+url = "https://api.quotable.io/random?"
 
 response = requests.get(url, timeout=10)
 response.raise_for_status()  # raises an error for bad status codes
