@@ -1,4 +1,4 @@
-import urllib.requests
+import requests
 
 url = "https://api.quotable.io/random?"
 
