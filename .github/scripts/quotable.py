@@ -1,9 +1,8 @@
 import requests
 
-url = "https://api.quotable.io/random?"
-
+url = "https://zenquotes.io/api/random"
 response = requests.get(url, timeout=10)
-response.raise_for_status()  # raises an error for bad status codes
+response.raise_for_status()
 
-data = response.json()
-print(f"\"{data['content']}\" — {data['author']}")
+data = response.json()[0]
+print(f"\"{data['q']}\" — {data['a']}")
