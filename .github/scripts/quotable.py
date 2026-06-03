@@ -7,5 +7,5 @@ response.raise_for_status()
 
 data = response.json()[0]
 #quote = f"\"{data['q']}\" — {data['a']}"
-#quote = f"\"{data['content']}\" — {data['author']}"
+quote = f"\"{data['content']}\" — {data['author']}"
 print(quote)
