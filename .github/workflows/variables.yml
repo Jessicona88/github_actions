@@ -1,0 +1,21 @@
+name: Try out variables and context
+on:
+  workflow_dispatch:
+
+env:
+  workfl_var: I-am-a-workflow-var
+  
+jobs:
+  variables-and-context:
+    runs-on: ubuntu-latest
+    env:
+      job_var: I-am-a-job-var
+    steps:
+      - name: default-env-variables
+        run: echo "$GIIHUB_ACTOR printed this default env variable"
+        
+      - name: Print out custom env variables
+        run: echo "Who are we? $workfl_var $job_var $step_var"
+        env:
+          step_var: I-am-a-step-var
+      
