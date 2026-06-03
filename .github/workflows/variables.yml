@@ -6,7 +6,7 @@ env:
   workfl_var: I-am-a-workflow-var
   
 jobs:
-  variables-and-context:
+  variables:
     runs-on: ubuntu-latest
     env:
       job_var: I-am-a-job-var
@@ -18,4 +18,14 @@ jobs:
         run: echo "Who are we? $workfl_var $job_var $step_var"
         env:
           step_var: I-am-a-step-var
+
+  context:
+    if: github.ref_name == 'main'
+    runs-on: ubuntu-slim
+    steps:
+      - name: Here comes context
+        run: |
+          echo "${{  github.actor }} tiggered workflow ${{ github.workflow }} manually, alias ${{ github.event_name }} and here comes a workflow custom var $workfl_var."
+    
+    
       
