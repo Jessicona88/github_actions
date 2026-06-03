@@ -2,7 +2,7 @@ name: Quote to GitHub Pages
 
 on:
   schedule:
-    - cron: "0 8 * * 1-5"
+    - cron: "0 10 * * 1-5" #UTC = GMT+2
   workflow_dispatch:
 
 permissions:
