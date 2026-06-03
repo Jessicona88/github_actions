@@ -1,6 +1,6 @@
 import requests
 
-url = "https://api.quotable.io/random?"
+url = "https://quotes.rest/qod?language=en"
 response = requests.get(url, timeout=10)
 response.raise_for_status()
 
