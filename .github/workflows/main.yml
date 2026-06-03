@@ -1,7 +1,5 @@
 name: Inspirational quote of the day
-on: 
-  schedule:
-    - cron: 0 8 * * 1-5
+on:
   workflow_dispatch: 
         
 jobs:
