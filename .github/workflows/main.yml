@@ -19,6 +19,7 @@ jobs:
   
       - name: Run script to get quote and print
         run: |
-          python .github/scripts/quotable.py
-          echo $GITHUB_STEP_SUMMARY
+          output="$(python .github/scripts/quotable.py)"
+          echo  "$output" >> "$GITHUB_STEP_SUMMARY"
+          cat "$GITHUB_STEP_SUMMARY"
 
