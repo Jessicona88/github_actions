@@ -20,5 +20,4 @@ jobs:
       - name: Run script to get quote and print
         run: |
           python .github/scripts/quotable.py
-          echo "$GITHUB_STEP_SUMMARY"
 
