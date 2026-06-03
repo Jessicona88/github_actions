@@ -5,4 +5,4 @@ response = requests.get(url, timeout=10)
 response.raise_for_status()
 
 data = response.json()[0]
-print(f"\"{data['q']}\" — {data['a']}")
+quote = print(f"\"{data['q']}\" — {data['a']}")
