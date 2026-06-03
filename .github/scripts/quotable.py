@@ -1,6 +1,6 @@
 import requests
 
-url = "https://quotes.rest/qod?language=en"
+url = "https://zenquotes.io/api/random"
 response = requests.get(url, timeout=10)
 response.raise_for_status()
 
