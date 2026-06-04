@@ -5,6 +5,9 @@ on:
     #- cron: '30 13 * * 1-5' #UTC = GMT+2
   workflow_dispatch:
 
+env:
+  ACTIONS_RUNNER_DEBUG: "true"
+  
 permissions:
   contents: read
   pages: write
