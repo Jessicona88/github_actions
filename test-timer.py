@@ -1,5 +1,5 @@
 import time
-from your_module import Timer
+from timer import Timer
 
 
 def test_timer_start_sets_fields():
