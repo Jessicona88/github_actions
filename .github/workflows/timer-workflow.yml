@@ -1,0 +1,13 @@
+on:
+  push:
+    branches: main
+  pull_request:
+
+jobs:
+  env_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print env info
+        run: echo "The runner's OS is: $RUNNER_OS"
+  
+  
