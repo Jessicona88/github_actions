@@ -7,7 +7,7 @@ GUI-app med Tkinter för att:
 - Pausa/fortsätta timers
 - Logga varje aktivitet i en CSV-fil med meddelande, varaktighet, datum och starttid
 
-Loggfil: timer_log.csv
+Loggfil med tidinmatningar: timer_log.csv
 """
 
 import csv
