@@ -17,5 +17,5 @@ jobs:
       - name: Install pytest
         uses: dariocurr/pytest-summary@v2.4
       - name: Run pytest tests
-        run: python -m pytest
+        run: python -m pytest test-timer.py
   
