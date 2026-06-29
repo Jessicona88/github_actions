@@ -10,5 +10,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Print env info
         run: echo "$RUNNER_OS"
-  
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install pytest
+        uses: dariocurr/pytest-summary@v2.4
+      - name: Run pytest tests
+        run: python -m pytest
   
